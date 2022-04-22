@@ -1,0 +1,81 @@
+@import './normalize.css';
+
+:root {
+    --bg-intro: hsl(217, 28%, 15%);
+    --bg-main: hsl(218, 28%, 13%);
+    --bg-footer: hsl(216, 53%, 9%);
+    --bg-testimonials: hsl(219, 30%, 18%);
+    --neutral: #fff;
+}
+
+*, 
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: var(--neutral);
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.heading,
+.nav,
+.cta {
+    font-family: 'Raleway', sans-serif;
+}
+
+.heading {
+    font-weight: 700;
+}
+
+/* List */
+.list {
+    list-style: none;
+    margin: 0;
+}
+
+.list_items {
+    display: inline-block;
+}
+
+/* Nav */
+.nav {
+    padding: 1.5rem 0;
+    background: var(--bg-intro);
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: 40% 60%;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+    padding-left: 0;
+}
+
+.nav__list .list_items {
+    padding-right: 2.4rem;
+}
+
+.nav__brand img{
+    transform: scale(0.7);
+}
+
+@media screen and (min-width:1024px) {
+    .nav {
+        padding: 3rem 0;
+    }
+
+    .list_items {
+        font-size: 1.6rem;
+    }
+}
