@@ -76,6 +76,24 @@ h3,
     background: cyan;
 }
 
+/* Grid */
+.grid {
+    display: grid;
+    row-gap: 4rem;
+}
+
+@media screen and (min-width: 768px) {
+    .grid--1x2 {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 4rem;
+        width: 100%;
+    }
+
+    .grid.container {
+        max-width: 863px;
+    }
+}
+
 /* Nav */
 .nav {
     padding: 1rem 0;
