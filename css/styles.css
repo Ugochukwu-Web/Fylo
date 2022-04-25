@@ -23,6 +23,7 @@ body {
     color: var(--neutral);
     font-size: 1.4rem;
     font-weight: 400;
+    background: var(--bg-main);
 }
 
 /* Links */
@@ -71,12 +72,14 @@ p {
     outline: 0;
     border: 0;
     border-radius: 40px;
-    padding: 2rem 9rem;
+    padding: 2.5rem 7.5rem;
     text-align: center;
     white-space: nowrap;
     margin: 1rem auto;
     cursor: pointer;
     color: var(--neutral);
+    width: 70%;
+    font-size: 2rem;
 }
 
 .btn:hover {
@@ -86,17 +89,13 @@ p {
 /* Grid */
 .grid {
     display: grid;
-    gap: 4rem;
+    gap: 4rem 10rem;
 }
 
 @media screen and (min-width: 768px) {
     .grid--1x2 {
         grid-template-columns: repeat(2, 1fr);
         width: 100%;
-    }
-
-    .grid.container {
-        max-width: 58%;
     }
 }
 
@@ -109,13 +108,12 @@ p {
 
 /* Nav */
 .nav {
-    padding: 1rem 0;
-    background: var(--bg-intro);
-    color: #fff;
+    padding: 2rem 1rem;
     display: grid;
     justify-content: space-between;
     align-items: center;
     grid-template-columns: 40% 60%;
+    background: var(--bg-intro);
 }
 
 .nav__list {
@@ -144,7 +142,7 @@ p {
 
 @media screen and (min-width:1024px) {
     .nav {
-        padding: 2rem 0 0;
+        padding: 4rem 2rem;
     }
 
     .list_items {
@@ -161,11 +159,17 @@ p {
     background-repeat: no-repeat;
 }
 
+.hero__container,
+.hero__content {
+    background: var(--bg-intro);
+}
+
 .hero__heading {
     text-align: center;
     font-size: 2.6rem;
     line-height: 1.4;
     max-width: 720px;
+    margin: 2rem auto;
 }
 
 .hero__tagline {
@@ -174,6 +178,8 @@ p {
     line-height: 1.3;
     max-width: 720px;
     padding: 0 2rem;
+    margin: 0 auto;
+    margin-bottom: 2rem;
 }
 
 .container {
@@ -186,6 +192,7 @@ p {
     .hero__content {
         background-image: url("../images/bg-curvy-desktop.svg");
         background-size: contain;
+        background-repeat: round;
     }
 
     .hero__heading {
@@ -193,23 +200,35 @@ p {
     }
     
     .hero__tagline {
-        font-size: 2.4rem;
-    }
-}
-
-@media screen and (min-width:1440px) {
-    .hero__content {
-        background-size: cover;
+        font-size: 2.2rem;
     }
 }
 
 /* Features */
+.features {
+    margin-top: 10rem;
+}
+
 .features__icon {
     width: 80px;
     height: 80px;
 }
 
+.features.container {
+    max-width: 923px;
+}
+
+@media screen and (min-width: 1024px) {
+    .features__tagline {
+        padding: 0 3rem;
+    }
+}
+
 /* Productive Feature */
+.prod-feature {
+    margin-top: 10rem;
+}
+
 .prod__content {
     text-align: left;
 }
@@ -258,9 +277,22 @@ p {
     }
 }
 
+@media screen and (min-width:1024px) {
+    .prod-feature.container {
+        padding: 0 4rem;
+    }
+}
+
+@media screen and (min-width:1440px) {
+    .prod__content {
+        padding: 0 10rem;
+    }
+}
+
 /* Testimonial */
 .testimonial__card {
     text-align: left;
+    background: var(--bg-testimonials);
 }
 
 .media {
@@ -286,10 +318,17 @@ p {
     margin-right: 1rem;
 }
 
-.testimonial:first-child {
-    background-image: url(../images/bg-quotes.png);
-    background-repeat: no-repeat;
-    background-position: 2rem -1rem;
+.test .quote {
+    position: relative;
+}
+
+.test .quote::before{
+    content: url(../images/bg-quotes.png);
+    position: absolute;
+    top: -60px;
+    left: -20px;
+    display: inline-block;
+    z-index: -1;
 }
 
 .media__image > img {
@@ -303,14 +342,12 @@ p {
 .testimonial.grid {
     gap: 2rem;
     max-width: 95%;
-    padding-top: 3rem;
+    margin-top: 10rem;
 }
 
 @media screen and (min-width:768px) {
-    .testimonial:first-child {
-        background-image: url(../images/bg-quotes.png);
-        background-repeat: no-repeat;
-        background-position: 0 0;
+    .test .quote::before {
+        left: -40px;
     }
 }
 
@@ -323,13 +360,22 @@ p {
 /* Callout */
 .callout {
     padding: 1rem 3rem;
-    box-shadow: 10px 0px 13px 0px grey;
+    position: relative;
+    z-index: 1;
+    background: var(--bg-intro);
+    bottom: -15rem;
+}
+
+.callout-section {
+    margin-top: 5rem;
+    border-radius: 10px;
 }
 
 .callout .btn {
     padding: 2rem 2.5rem;
     margin: 2rem 0 3rem;
     width: 100%;
+    font-size: 1.4rem;
 } 
 
 .callout__email {
@@ -374,6 +420,10 @@ p {
     text-align: left;
     font-size: 1.6rem;
     letter-spacing: .5px;
+    position: relative;
+    background: var(--bg-footer);
+    padding-top: 25rem;
+    bottom: -15px;
 }
 
 .footer__text {
