@@ -80,6 +80,7 @@ p {
     text-align: center;
     white-space: nowrap;
     width: 70%;
+    margin-top: 3rem;
 }
 
 .btn:hover {
@@ -157,15 +158,15 @@ p {
 
 /* Hero */
 .hero__content {
+    background: var(--bg-intro);
     background-image: url("../images/bg-curvy-mobile.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
+    background-repeat: round;
+    background-size: cover;
     display: grid;
     justify-content: center;
 }
 
-.hero__container,
-.hero__content {
+.hero__container {
     background: var(--bg-intro);
 }
 
@@ -388,6 +389,7 @@ p {
     border-radius: 40px;
     outline: 0;
     width: 100%;
+    border: 0;
 }
 
 .callout__input {
@@ -477,6 +479,7 @@ p {
 
 .footer__social {
     text-align: center;
+    margin-top: 7rem;
 }
 
 .fa-brands:hover {
