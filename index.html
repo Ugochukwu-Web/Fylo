@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="All your files in one secure location, accessible anywhere">
+    <meta property="og:url" content="https://moshifyrickz.netlify.app">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Fylo">
+    <meta property="og:description" content="All your files in one secure location, accessible anywhere">
+    <meta property="og:image" content="images/logo.svg">
     <title>Fylo</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,7 +48,7 @@
             <button type="submit" class="btn cta">Get Started</button>
         </header>
     </section>
-    <section class="grid grid--1x2 container features">
+    <section class="grid grid--1x2 container features" data-aos="fade-up">
         <article class="feature">
             <svg class="features__icon">
                 <use href="images/sprite.svg#icon-access-anywhere"></use>
@@ -86,10 +91,10 @@
         </article>
     </section>
     <section class="container grid grid--1x2 prod-feature">
-        <div class="img">
+        <div class="img" data-aos="fade-up-right">
             <img src="images/illustration-stay-productive.png" alt="Stay Productive" class="image">
         </div>
-        <header class="prod__content">
+        <header class="prod__content" data-aos="fade-up">
             <h2 class="prod__heading">Stay productive, wherever you are</h2>
             <p class="prod__tagline">
                 Never let location be an issue when accessing your files. Fylo has you covered for all of your file 
@@ -108,7 +113,7 @@
             </a>
         </header>
     </section>
-    <section class="container grid grid--1x2 grid--1x3 testimonial">
+    <section class="container grid grid--1x2 grid--1x3 testimonial" data-aos="zoom-in">
         <div class="testimonial__card test">
             <blockquote class="quote">
                 <p class="quote__text">
@@ -235,5 +240,9 @@
                 </p>
             </footer>
     </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>
