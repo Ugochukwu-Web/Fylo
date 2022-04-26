@@ -22,16 +22,10 @@
     <header>
         <nav class="nav">
             <a href="#" class="nav__brand"><img src="images/logo.svg" alt="Logo"></a>
-            <ul class="nav__list list">
-                <a href="" class="nav__link-list">
-                    <li class="list_items">Features</li>
-                </a>
-                <a href="" class="nav__link-list">
-                    <li class="list_items">Team</li>
-                </a>
-                <a href="" class="nav__link-list">
-                    <li class="list_items">Sign In</li>
-                </a>
+            <ul class="list nav__list">
+                    <li class="list_items"><a href="" class="nav__link-list">Features</a></li>
+                    <li class="list_items"><a href="" class="nav__link-list">Team</a></li>
+                    <li class="list_items"><a href="" class="nav__link-list">Sign In</a></li>
             </ul>
         </nav>
     </header>
@@ -48,7 +42,7 @@
             <button type="submit" class="btn cta">Get Started</button>
         </header>
     </section>
-    <section class="grid grid--1x2 container features" data-aos="fade-up">
+    <div class="grid grid--1x2 container features" data-aos="fade-up">
         <article class="feature">
             <svg class="features__icon">
                 <use href="images/sprite.svg#icon-access-anywhere"></use>
@@ -89,7 +83,7 @@
                     file types to be securely stored and shared.</p>
             </header>
         </article>
-    </section>
+    </div>
     <section class="container grid grid--1x2 prod-feature">
         <div class="img" data-aos="fade-up-right">
             <img src="images/illustration-stay-productive.png" alt="Stay Productive" class="image">
@@ -169,8 +163,8 @@
             </blockquote>
         </div>
     </section>
-    <section class="container callout-section">
-        <article class="callout">
+    <div class="container callout-section">
+        <article class="callout" data-aos="zoom-out">
             <header class="callout__header">
                 <h2 class="callout__heading">
                     Get early access today
@@ -185,10 +179,10 @@
                 <button type="submit" class="btn cta">Get Started For Free</button>
             </form>
         </article>
-    </section>
-    <section class="container footer">
+    </div>
+    <footer class="container footer">
             <img src="images/logo.svg" alt="Logo" class="footer__logo">
-            <div class="footer__sections">
+            <div class="footer__sections" data-aos="zoom-in-up">
                 <p class="footer__text logos">
                     <span class="footer__icon">
                         <svg class="footer__icon">
@@ -233,13 +227,13 @@
                     <i class="fa-brands fa-instagram"></i>
                 </div>
             </div>
-            <footer>
+            <div>
                 <p class="attribution">
                   Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor / Side Hustle</a>.
                   Coded by <a href="#">Ugochukwu Umeh (Group 229)</a>.
                 </p>
-            </footer>
-    </section>
+            </div>
+    </footer>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
       AOS.init();

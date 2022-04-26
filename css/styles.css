@@ -123,15 +123,20 @@ p {
     padding-left: 0;
 }
 
-.nav__link-list:hover .list_items{
+.nav__list a {
+    opacity: .7;
+}
+
+.nav__link-list:hover{
     text-decoration: underline;
+    text-underline-offset: 3px;
     opacity: 1;
     transition: opacity .3s, text-decoration .3s;
 }
 
-.nav__list .list_items {
+
+.nav__list .list_items{
     padding-right: 1rem;
-    opacity: 0.7;
 }
 
 .nav__brand img{
